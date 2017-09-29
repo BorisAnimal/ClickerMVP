@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/main_counter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:text="[init me]"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:layout_margin="5dp"
+        android:textColor="@color/colorAccent"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_margin="5dp"
+            android:id="@+id/main_button_inc"
+            android:layout_width="30dp"
+            android:layout_weight="50"
+            android:layout_height="wrap_content"
+            android:text="@string/increase"
+            android:textColor="#FFF"
+            android:background="@color/colorPrimaryDark"/>
+        <Button
+            android:layout_margin="5dp"
+            android:id="@+id/main_button_dec"
+            android:layout_width="30dp"
+            android:layout_weight="50"
+            android:layout_height="wrap_content"
+            android:text="@string/decrease"
+            android:textColor="#FFF"
+            android:background="@color/colorPrimaryDark"/>
+    </LinearLayout>
+
+
+</LinearLayout>
