@@ -1,4 +1,4 @@
-package com.example.boo.hellomvp;
+package com.example.boo.hellomvp.ui;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,12 +7,16 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.boo.hellomvp.mvp.CounterMVP;
+import com.example.boo.hellomvp.mvp.presenters.CounterPresenter;
+import com.example.boo.hellomvp.R;
+
 /**
  * Created by boo on 26.09.17.
  */
 
-public class ActivityMain extends AppCompatActivity implements View {
-    private Presenter presenter;
+public class ActivityMain extends AppCompatActivity implements CounterMVP.View {
+    private CounterMVP.Presenter presenter;
     private Button incButton;
     private Button decButton;
     private TextView counterView;
@@ -33,7 +37,7 @@ public class ActivityMain extends AppCompatActivity implements View {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        presenter = new PresenterCounter(this);
+        presenter = new CounterPresenter(this);
 
         //TODO: Gooogle "Butterknife" to make it simple, clever
         incButton = (Button) findViewById(R.id.main_button_inc);

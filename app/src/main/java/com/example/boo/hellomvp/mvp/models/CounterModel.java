@@ -1,17 +1,19 @@
-package com.example.boo.hellomvp;
+package com.example.boo.hellomvp.mvp.models;
+
+import com.example.boo.hellomvp.mvp.CounterMVP;
 
 /**
  * Created by boo on 26.09.17.
  */
 
-public class Model {
+public class CounterModel implements CounterMVP.Model{
     private int counter;
 
-    public Model(int initCounter) {
+    public CounterModel(int initCounter) {
         counter = initCounter;
     }
 
-    public Model(){
+    public CounterModel(){
         counter = 0;
     }
 
