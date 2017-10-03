@@ -7,9 +7,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.boo.hellomvp.R;
 import com.example.boo.hellomvp.mvp.CounterMVP;
 import com.example.boo.hellomvp.mvp.presenters.CounterPresenter;
-import com.example.boo.hellomvp.R;
 
 /**
  * Created by boo on 26.09.17.
@@ -46,7 +46,7 @@ public class ActivityMain extends AppCompatActivity implements CounterMVP.View {
 
         presenter = new CounterPresenter(this);
 
-        //TODO: Gooogle "Butterknife" to make it simple, clever
+        //TODO: Gooogle "Butterknife" to make it simple, clever 
         incButton = (Button) findViewById(R.id.main_button_inc);
         decButton = (Button) findViewById(R.id.main_button_dec);
         counterView = (TextView) findViewById(R.id.main_counter);
