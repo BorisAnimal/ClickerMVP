@@ -21,16 +21,23 @@ public class ActivityMain extends AppCompatActivity implements CounterMVP.View {
     private Button decButton;
     private TextView counterView;
 
-    @Override
-    public void updateCounter(int value) {
-        if(counterView != null)
-            counterView.setText(value + "");
-    }
-
-    @Override
-    public void showNotification(String message) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
-    }
+    /**
+     * Week 2 TODO:
+     *
+     * View (представления) и всё что с ними связано:
+     *      XML и пользовательские элементы (кнопки, текст, ввод текста, картинки),
+     *      получение с них информации
+     *
+     *      Size (dp, sp, px, %)
+     *
+     *      Layout (контейнеры)
+     *
+     *      Dialogs (получение с них информации)
+     *
+     *      Advanced: подключить пользовательский элемент с чужого github - кастомный
+     *
+     *      Вы ещё живы? Поговорить про второе Activity, цикл жизни Activity, поворот экрана.
+     */
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -59,5 +66,16 @@ public class ActivityMain extends AppCompatActivity implements CounterMVP.View {
                 presenter.increaseCounter();
             }
         });
+    }
+
+    @Override
+    public void updateCounter(int value) {
+        if(counterView != null)
+            counterView.setText(value + "");
+    }
+
+    @Override
+    public void showNotification(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 }
