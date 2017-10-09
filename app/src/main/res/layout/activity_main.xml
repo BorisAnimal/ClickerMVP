@@ -4,6 +4,13 @@
     android:orientation="vertical"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:src="@mipmap/no_image"
+        android:layout_height="wrap_content"
+        android:onClick="swapImageState"
+        android:visibility="visible"/>
     <TextView
         android:id="@+id/main_counter"
         android:layout_width="match_parent"
